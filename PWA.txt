@@ -68,7 +68,7 @@ LOOP FOREACH CurrentItem2 IN 前半
 END
 # 後半
 LOOP FOREACH CurrentItem3 IN 後半
-    Text.Replace Text: CurrentItem2 TextToFind: tmpStr IsRegEx: False IgnoreCase: False ReplaceWith: $'''%''%''' ActivateEscapeSequences: False Result=> Replaced
+    Text.Replace Text: CurrentItem3 TextToFind: tmpStr IsRegEx: False IgnoreCase: False ReplaceWith: $'''%''%''' ActivateEscapeSequences: False Result=> Replaced
     Text.GetSubtext.GetSubtext Text: Replaced CharacterPosition: 1 NumberOfChars: 1 Subtext=> Subtext
     SWITCH Subtext
         CASE StartsWith(晴, False)
